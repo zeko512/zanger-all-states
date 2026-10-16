@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: #fff;
+    background-color: #111;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.62)),
+        url("https://img.magnific.com/free-vector/grey-hexagons-black-background_78370-2098.jpg?semt=ais_hybrid&w=740&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.new-zangar-state {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 24px;
+}
+
+.main-button {
+    display: inline-flex;
+    min-width: min(360px, 90vw);
+    min-height: 88px;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 36px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    background: #292929;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-family: "Aref Ruqaa", serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 220ms ease,
+        color 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
+    animation: button-appear 700ms ease-out both;
+}
+
+.main-button:hover,
+.main-button:focus-visible {
+    transform: translateY(-4px) scale(1.03);
+    background: #c9b96b;
+    box-shadow: 0 16px 38px rgba(201, 185, 107, 0.2);
+    color: #171717;
+}
+
+.main-button:focus-visible {
+    outline: 3px solid #c9b96b;
+    outline-offset: 5px;
+}
+
+@keyframes button-appear {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
